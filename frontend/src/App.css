@@ -13,3 +13,13 @@
     color: white; 
 } 
 
+.form {
+    background-image: url("./assets/picthree.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 45vh;
+    padding-right: 50vh;
+}
+
