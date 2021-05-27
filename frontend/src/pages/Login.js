@@ -1,17 +1,17 @@
 import { Container, Form, Button, Col } from "react-bootstrap";
+import styled from 'styled-components'
 
 const Login = () => {
     return (
-        <>
-            <Container>
-            
-                <Form>
-                <Col sm = {4}>
+        <Page className="page">
+            {/* <div>
+                <p>Sorted</p>
+            </div> */}
+            <ContainerStyled>
+                <Form className="mb-2">
+                <Col md = {15}>
                     <Form.Group className="mb-4" controlId="formBasicEmail">
                         <Form.Control className="mb-4" type="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                        </Form.Text>
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
@@ -28,8 +28,19 @@ const Login = () => {
                 </div>
                 </Col>
                 </Form>
-        </Container>
-    </>
+        </ContainerStyled>
+    </Page>
     )
 }
+
+const Page = styled.div `
+    background-color:#282c34c9;
+`
+
+const ContainerStyled = styled(Container) `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+`
 export default Login;

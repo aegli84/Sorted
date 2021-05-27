@@ -1,4 +1,5 @@
 import './App.css';
+import GlobalStyles from './GlobalStyles';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Switch, Route} from "react-router-dom";
 import Input from './pages/Input'
@@ -6,18 +7,22 @@ import Login from './pages/Login';
 
 function App() {
   return (
+    <>
+    <GlobalStyles/>
     <Switch>
       <Route exact path="/auth">
         <Login />
       </Route>
       <Route path="/input">
-        <Input />
+        <Input/>
       </Route>
       <Route path="/">
         <Login />
       </Route>
     </Switch>
+    </>
   );
+  
 }
 
 export default App;
