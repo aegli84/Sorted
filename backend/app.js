@@ -1,9 +1,16 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 
-require('dotenv').config();
+
+const connectDB = require('./config/mongodb')
+const task = require('./router/task');
+const auth = require('./router/auth')
+const authMid = require('./middleware/auth')
 
 const port = process.env.PORT || 8080;
+
+connectDB();
 
 app.use(express.json());
 
@@ -17,5 +24,7 @@ let allowCrossDomain = function (req, res, next) {
 
 app.use(allowCrossDomain);
 
+app.use('/task', authMid.checkAuth, task);
+app.use('/auth', auth)
 
 app.listen(port, () => console.log(`Server started to run on ${port}`));
