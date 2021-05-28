@@ -10,7 +10,7 @@ const Input = () => {
                 <input type="task" required placeholder="Task" />
                 <input type="location" required placeholder="Location"/>
                 <input type="date" placeholder="Date" />
-                <input type="time" required placeholder="Address"/>
+                <input type="time" required placeholder="00"/>
                 <Button>Create</Button>
             </Form>
         </Page>
@@ -26,6 +26,7 @@ const Page = styled.div `
     background-image: url(${picthree});
     background-repeat: no-repeat;
     background-size: contain;
+    box-shadow: 2px 2px 50px rgba(99, 99, 99, 0.842);
 `
 
 const Form = styled.form `
