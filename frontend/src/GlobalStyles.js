@@ -7,9 +7,12 @@ const GlobalStyles = createGlobalStyle `
     box-sizing: border-box;
 }
 
+body {
+    background-color: #cdced0;
+}
+
 html {
     overflow-x:  hidden;
 }
 `
-
 export default GlobalStyles;

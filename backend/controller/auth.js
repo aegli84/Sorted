@@ -12,7 +12,7 @@ exports.registerUser = async (req, res) => {
 
     const newUser = new user({email, pass})
 
-    users.findOne({email, pass}, (err, doc) =>{
+    user.findOne({email, pass}, (err, doc) =>{
         if(err) {
             console.log(err)
             res.send({status: 'failed', message: err});
@@ -36,7 +36,7 @@ exports.loginUser = (req, res) => {
 
     let {email, pass} = req.body;
 
-    users.findOne({email}, async (err, doc) => {
+    user.findOne({email}, async (err, doc) => {
         if(err) {
             console.log(err)
             res.send({status: 'failed', message: err});

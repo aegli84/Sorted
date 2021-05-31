@@ -45,7 +45,7 @@ const Login = () => {
                     alert (output.message)
                     console.log(output)
                     localStorage.setItem('token', output.token)
-                    history.push('/user')
+                    history.push('/task')
                 }));
         }
     }

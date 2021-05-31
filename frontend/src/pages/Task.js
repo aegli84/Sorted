@@ -10,22 +10,26 @@ const Input = () => {
                 <input type="task" required placeholder="Task" />
                 <input type="location" required placeholder="Location"/>
                 <input type="date" placeholder="Date" />
-                <input type="time" required placeholder="00"/>
+                <input type="time" required placeholder="time"/>
                 <Button>Create</Button>
             </Form>
         </Page>
         );
     }
-            
+    
 const Page = styled.div `
     min-height: 100vh;
     display: flex;
-    align-items: left;
-    justify-content: left;
-    background-color:#8f9e7c;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    width: 35rem;
+    /* background-color: blue; */
     background-image: url(${picthree});
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    /* border: 2px solid rgba(99, 99, 99, 0.842); */
     box-shadow: 2px 2px 50px rgba(99, 99, 99, 0.842);
 `
 
@@ -35,8 +39,8 @@ const Form = styled.form `
     flex-direction: column;
     padding: 20px 0;
 	position: relative;
-    margin-top: 42vh;
-	margin-left: 7vh;
+    margin-top: 35vh;
+    margin-bottom: 15vh;
 
 	input {
 		display: block;
